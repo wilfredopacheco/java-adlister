@@ -5,6 +5,8 @@
     <title><%= "Welcome!" %></title>
 </head>
 <body>
+<%@include file="partials/head.jsp"%>
+
     <h1>Welcome!</h1>
     <c:redirect url="login.jsp"/>
 </body>

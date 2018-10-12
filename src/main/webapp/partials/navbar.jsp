@@ -2,17 +2,17 @@
   Created by IntelliJ IDEA.
   User: wilfredopacheco
   Date: 10/11/18
-  Time: 11:14 AM
+  Time: 2:08 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Profile</title>
+    <title>Title</title>
 </head>
-<body class="container">
-<%@include file="partials/head.jsp"%>
+<body>
+<%@include file="head.jsp"%>
 
-<div class="display-4">Profile Page</div>
+<%--has the site's navbar--%>
 </body>
 </html>
