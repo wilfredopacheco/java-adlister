@@ -12,6 +12,7 @@ public class ShowProductsServlet extends HttpServlet {
         // Use the factory to get the dao object
         // Use a method on the dao to get all the products
         // Pass the data to the jsp
+
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/ads/index.jsp").forward(request, resp);
     }
