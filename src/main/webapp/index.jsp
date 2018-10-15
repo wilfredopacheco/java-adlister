@@ -9,7 +9,14 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+        <c:choose>
+            <c:when test="${username != null}">
+                <h1>Welcome to the Adlister, ${sessionScope.username}!</h1>
+            </c:when>
+            <c:when test="${username == null}">
+                <h1>Welcome to the Adlister!</h1>
+            </c:when>
+        </c:choose>
     </div>
 </body>
 </html>
