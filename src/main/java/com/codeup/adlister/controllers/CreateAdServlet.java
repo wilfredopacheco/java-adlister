@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import static java.lang.Integer.parseInt;
+
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,7 +23,7 @@ public class CreateAdServlet extends HttpServlet {
 
         if (request.getSession().getAttribute("user") != null) {
             Ad ad = new Ad(
-                    1, // for now we'll hardcode the user id
+                    parseInt(request.getSession().getId()), // for now we'll hardcode the user id
                     request.getParameter("title"),
                     request.getParameter("description")
             );
